@@ -1,5 +1,8 @@
 package
 {
+	import com.gerantech.extensions.PlayPass;
+	import com.gerantech.extensions.events.PlayPassEvent;
+
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
@@ -20,7 +23,13 @@ package
 
 		protected function checkButton_clickHandler(event:MouseEvent):void
 		{
-			trace(123);
+			PlayPass.instance.checkLicence();
+			PlayPass.instance.addEventListener(PlayPassEvent.ALLOW, this.playpass_allowHandler);
+		}
+
+		private function playpass_allowHandler(event:Object):void
+		{
+			PlayPass.instance.removeEventListener(PlayPassEvent.ALLOW, this.playpass_allowHandler);
 		}
 	}
 }
