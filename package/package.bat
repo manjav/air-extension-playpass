@@ -1,5 +1,5 @@
 echo f | xcopy /f /y ..\playpass_as3\bin\playpass_as3_lib.swc
-"C:\Program Files\7-Zip\7z.exe" e playpass_as3_lib.swc -odefault library.swf -aoa
+"7z.exe" e playpass_as3_lib.swc -odefault library.swf -aoa
 echo f | xcopy /f /y default\library.swf android\
 echo f | xcopy /f /y ..\playpass_android\app\build\intermediates\packaged-classes\release\classes.jar android\
 
