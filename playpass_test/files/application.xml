@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<application xmlns="http://ns.adobe.com/air/application/32.0">
+  <id>com.gerantech.extensions.playpasstest</id>
+  <versionNumber>0.1.200</versionNumber>
+  <supportedProfiles>mobileDevice</supportedProfiles>
+  <filename>PlayPass</filename>
+  <name>PlayPass Tests</name>
+  <description></description>
+  <initialWindow>
+    <title>PlayPass</title>
+    <content>release.swf</content>
+    <visible>true</visible>
+    <renderMode>direct</renderMode>
+    <aspectRatio>portrait</aspectRatio>
+    <autoOrients>false</autoOrients>
+    <depthAndStencil>true</depthAndStencil>
+  </initialWindow>
+  <icon>
+    <image48x48>icons/icon_48.png</image48x48>
+    <image72x72>icons/icon_72.png</image72x72>
+    <image96x96>icons/icon_96.png</image96x96>
+    <image144x144>icons/icon_144.png</image144x144>
+  </icon>
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto">
+	<uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+</manifest>
+]]></manifestAdditions>
+  </android>
+  <iPhone>
+    <InfoAdditions><![CDATA[<key>UIStatusBarStyle</key>
+<string>UIStatusBarStyleBlackOpaque</string>
+<key>UIRequiresPersistentWiFi</key>
+<string>NO</string>
+<key>UIApplicationExitsOnSuspend</key>
+<true />
+<key>UIDeviceFamily</key>
+<array>
+	<string>1</string>
+</array>]]></InfoAdditions>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+  </iPhone>
+  <extensions>
+	<extensionID>com.gerantech.extensions.playpass</extensionID>
+  </extensions>
+</application>
