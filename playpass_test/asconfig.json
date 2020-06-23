@@ -36,6 +36,7 @@
 			}
 		],
 		"android": {
+			"arch": "armv7",
 			"listen": true,
 			"output": "dist/app.apk",
 			"extdir": ["exts"],
