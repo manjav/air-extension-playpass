@@ -85,7 +85,7 @@ package com.gerantech.extensions
 			switch(event.code)
 			{
 				case "allow":
-					dispatchEvent( new PlayPassEvent(PlayPassEvent.ALLOW, event.level, false, false ) );
+					dispatchEvent( new PlayPassEvent(event.code, event.level, false, false ) );
 					break;
 			}
 		}
