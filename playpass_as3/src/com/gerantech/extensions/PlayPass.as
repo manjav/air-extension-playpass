@@ -52,7 +52,15 @@ package com.gerantech.extensions
 			
 			return _instance;
 		}
-
+		
+		public function checkLicence():void
+		{
+			if(!isAndroid){
+				this.dispatchEvent(new PlayPassEvent(PlayPassEvent.ALLOW, false));
+				return;
+			}
+			extContext.call("licence", "check")
+		}
 				
 		/**
 		 * Cleans up the instance of the native extension. 
@@ -74,6 +82,12 @@ package com.gerantech.extensions
 		private function onStatus( event:StatusEvent ):void 
 		{
 			trace(event.code, event.level);
+			switch(event.code)
+			{
+				case "allow":
+					dispatchEvent( new PlayPassEvent(PlayPassEvent.ALLOW, event.level, false, false ) );
+					break;
+			}
 		}
 		
 		//----------------------------------------
@@ -81,7 +95,7 @@ package com.gerantech.extensions
 		// Constructor
 		//
 		//----------------------------------------
-
+		
 		/**
 		 * Constructor. 
 		 */		

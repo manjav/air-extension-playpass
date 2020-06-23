@@ -30,6 +30,7 @@ package com.gerantech.extensions.events
 		 */		
 
 		public static const ERROR:String = "error";
+		public static const ALLOW:String = "allow";
 
 
 		//----------------------------------------
