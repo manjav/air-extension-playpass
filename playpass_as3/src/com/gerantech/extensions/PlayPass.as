@@ -53,13 +53,13 @@ package com.gerantech.extensions
 			return _instance;
 		}
 		
-		public function checkLicence():void
+		public function checkLicence(base64Key:String):void
 		{
 			if(!isAndroid){
 				this.dispatchEvent(new PlayPassEvent(PlayPassEvent.ALLOW, false));
 				return;
 			}
-			extContext.call("licence", "check")
+			extContext.call("check", base64Key)
 		}
 				
 		/**
