@@ -5,19 +5,19 @@
         <platform name="Android-ARM">
             <applicationDeployment>
                  <nativeLibrary>classes.jar</nativeLibrary>
-                <initializer>com.gerantech.extensions.PlayPassExtension</initializer>
+                <initializer>com.gerantech.extensions.playpass.PlayPassExtension</initializer>
             </applicationDeployment> 
         </platform>
         <platform name="Android-ARM64">
             <applicationDeployment>
                  <nativeLibrary>classes.jar</nativeLibrary>
-                <initializer>com.gerantech.extensions.PlayPassExtension</initializer>
+                <initializer>com.gerantech.extensions.playpass.PlayPassExtension</initializer>
             </applicationDeployment> 
         </platform>
         <platform name="Android-x86">
             <applicationDeployment>
                  <nativeLibrary>classes.jar</nativeLibrary>
-                <initializer>com.gerantech.extensions.PlayPassExtension</initializer>
+                <initializer>com.gerantech.extensions.playpass.PlayPassExtension</initializer>
             </applicationDeployment>
         </platform>
 		<!-- <platform name="iPhone-ARM"> 
