@@ -1,4 +1,4 @@
-package com.gerantech.extensions;
+package com.gerantech.extensions.playpass;
 
 import android.util.Log;
 
@@ -12,7 +12,6 @@ public class PlayPassExtension implements FREExtension
 	@Override
 	public FREContext createContext(String arg0)
 	{
-		// TODO Auto-generated method stub
 		Log.w(PlayPassExtension.LOG_TAG, "Inside Create Context");
 		return new PlayPassExtensionContext();
 	}
